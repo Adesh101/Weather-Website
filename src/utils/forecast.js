@@ -12,7 +12,7 @@ const forecast = (latitude, longitude, callback) => {
             callback('Unable to find the location weatherstack', undefined)
         }
         else{
-            callback(undefined, 'The weather is '+body.current.weather_descriptions[0]+'. It is currently '+body.current.temperature+' degrees. There is a '+body.current.precip+'% chance of rain.')
+            callback(undefined, 'The weather is '+body.current.weather_descriptions[0]+'. It is currently '+body.current.temperature+' degrees. There is a '+body.current.precip+'% chance of rain. The humidity is '+body.current.humidity+'%.')
         }
     })
 }
